@@ -11,7 +11,7 @@
     <div class="login-box">
         <h2>Login</h2>
         @include('admin.alert')
-        <form  action="/admin/login/store" method="post" >
+        <form  action="/user/login/auth" method="post" >
             <div class="user-box">
                 <input type="email" name="email" class="form-control">
                 <label>Email</label>

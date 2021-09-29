@@ -11,7 +11,6 @@ class AdminController extends Controller
         return view('admin.loginAdmin');
     }
     public function store(Request $request){
-        
         $validated = $request->validate([
             'email' => 'required|email:filter',
             'password' => 'required',
