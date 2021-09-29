@@ -1,17 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Useres;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class AdminController extends Controller
+class LoginController extends Controller
 {
     public function login(){
-        return view('admin.loginAdmin');
+        return view('admin.loginUser'); 
     }
     public function store(Request $request){
-        
         $validated = $request->validate([
             'email' => 'required|email:filter',
             'password' => 'required',
@@ -27,6 +26,6 @@ class AdminController extends Controller
         }
         $request->session()->flash('error', 'Email hoặc password không đúng');
         return redirect()->back();
-
     }
+    
 }
