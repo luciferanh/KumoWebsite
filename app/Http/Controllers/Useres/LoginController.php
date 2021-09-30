@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class LoginController extends Controller
 {
     public function login(){
-        return view('admin.loginUser'); 
+        return view('loginUser'); 
     }
     public function store1(Request $request){
      

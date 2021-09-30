@@ -4,8 +4,8 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Useres\LoginController;
 
-Route::get('user/login',[LoginController::class,'login']);
-Route::post('user/login/auth',[LoginController::class,'store1']);
+Route::get('users/login',[LoginController::class,'login']);
+Route::post('users/login/auth',[LoginController::class,'store1']);
 
 Route::get('admin/login',[AdminController::class,'login']);
 Route::post('admin/login/store', [AdminController::class,'store']);
