@@ -10,6 +10,11 @@ class AdminController extends Controller
     public function login(){
         return view('admin.loginAdmin');
     }
+    public function hello(){
+        return view('admin.home',[
+            'title'=> 'Trang quản trị admin'
+        ]);
+    }
     public function store(Request $request){
         $validated = $request->validate([
             'email' => 'required|email:filter',
