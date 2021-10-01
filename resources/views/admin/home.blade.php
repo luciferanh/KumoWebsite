@@ -1,6 +1,11 @@
 @extends('admin.main')
 
 @section('content')
-    Nội dung
+    <section id="main-content">
+        <section class="wrapper">
+            Viet Anh
+
+        </section>
+    </section>
 @endsection
 

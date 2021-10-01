@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\Admin\ExcelController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
@@ -14,7 +16,12 @@ Route::get('home',[MainController::class,'index'])->name('home');
 Route::middleware(['auth'])->group( function(){
     Route::prefix('admin') ->group(function(){
         Route::get('main',[AdminController::class, 'hello']) ->name('admin');
+        Route::get('add_excel',[ExcelController::class,'index']);
     });
 });
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

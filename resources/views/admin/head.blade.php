@@ -3,10 +3,16 @@
 <title>{{$title}}</title>
 
 <!-- Google Font: Source Sans Pro -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-<!-- Font Awesome -->
+<link rel="stylesheet" href="./css/bootstrap.min.css" >
 
-<link href="/css/app.css" rel="stylesheet">
+<!-- Custom CSS -->
+
+<link href="./css/style.css" rel='stylesheet' type='text/css' />
+<link href="./css/style-responsive.css" rel="stylesheet"/>
+
+
+<link rel="stylesheet" href="./css/font.css" type="text/css"/>
+<link href="./css/font-awesome.css" rel="stylesheet">
 
 <meta name="csrf-token" content="{{ csrf_token() }}">
 @yield('head')
